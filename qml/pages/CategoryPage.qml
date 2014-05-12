@@ -56,6 +56,13 @@ Page {
 
         PullDownMenu {
             MenuItem {
+                text: "Delete Category"
+                onClicked: {
+                    var dialog = pageStack.push(Qt.resolvedUrl("../components/DeleteCategoryDialog.qml"),{"category":categoryName})
+                }
+            }
+
+            MenuItem {
                 text: "Add"
                 onClicked: {
                     var dialog = pageStack.push(Qt.resolvedUrl("../components/NewEntryDialog.qml"),{"category":categoryName})

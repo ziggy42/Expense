@@ -264,10 +264,7 @@ function getFuckingTotal() {
 
 function getPercentageForCategory(category) {
     var db = getDatabase();
-    var total
-    var current
-    var rs
-    var dbItem
+    var total, current, rs, dbItem
     var currentDate = new Date();
     var date = (currentDate.getMonth() + 1) + "" +  currentDate.getFullYear();
 
@@ -318,11 +315,9 @@ function getPercentageForCategoryTotal() {
     return parseInt((100*current)/total)
 }
 
-
 function deleteItem(category,amount,desc,date) {
     var db = getDatabase();
-    var res
-    var rs
+    var res, rs;
 
     db.transaction(function(tx) {
         if(desc === "") {
@@ -332,6 +327,20 @@ function deleteItem(category,amount,desc,date) {
             rs = tx.executeSql('DELETE FROM expense WHERE category=? AND amount=? AND date=? AND desc=?;', [category,amount,date,desc]);
         }
         if (rs.rowsAffected > 0) res = "OK";
+        else res = "Error";
+    });
+
+    return res;
+}
+
+function deleteCategory(category) {
+    var db = getDatabase();
+    var res, rs1, rs2;
+
+    db.transaction(function(tx) {
+        rs1 = tx.executeSql('DELETE FROM expense WHERE category=?;', [category]);
+        rs2 = tx.executeSql("DELETE FROM categories WHERE category='" + category + "';");
+        if (rs1.rowsAffected > 0 && rs2.rowsAffected > 0) res = "OK";
         else res = "Error";
     });
 
