@@ -53,17 +53,13 @@ Page {
                 monthStr = "December"
                 break;
         }
-
         return monthStr + " " + temp.substring(2);
-
     }
 
     Component.onCompleted: {
         months = DBmanager.getAllMonths()
-
-        for(var i = 0; i < months.length; i++) {
+        for(var i = 0; i < months.length; i++)
             monthsModel.append({"month" : months[i]})
-        }
     }
 
     SilicaListView {
@@ -89,6 +85,10 @@ Page {
                 value: DBmanager.getTotalByMonthAndYear(month)
                 valueText: value + " " + Preferences.getCurrency()
                 label: makeMeACoolMonth(month)
+            }
+
+            onClicked: {
+                pageStack.push(Qt.resolvedUrl("MonthSummaryPage.qml"),{"period":makeMeACoolMonth(month),"uglyperiod":month})
             }
         }
         VerticalScrollDecorator {}

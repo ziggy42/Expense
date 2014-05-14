@@ -14,7 +14,10 @@ Page {
         PullDownMenu {
             MenuItem {
                 text: "Restore Default"
-                //onClicked:
+                onClicked: {
+                    Preferences.set("Currency",0)
+                    currencyComboBox.currentIndex = 0
+                }
             }
         }
 
@@ -30,6 +33,7 @@ Page {
             }
 
             ComboBox {
+                id: currencyComboBox
                 width: parent.width * 0.75
                 anchors {horizontalCenter: parent.horizontalCenter}
                 label: "Currency: "
@@ -42,6 +46,19 @@ Page {
                 }
 
                 onCurrentIndexChanged: Preferences.set("Currency",currentIndex)
+            }
+
+            Button {
+                id: contactLabel
+                width: parent.width * 0.75
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                }
+                text: "Contact the Developer"
+
+                onClicked: {
+                    pageStack.push(Qt.resolvedUrl("ContactsPage.qml"))
+                }
             }
         }
     }

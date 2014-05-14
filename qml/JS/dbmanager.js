@@ -221,8 +221,6 @@ function getSpentThisMonthInCategory(category) {
     var currentDate = new Date();
     var date = (currentDate.getMonth() + 1) + "" +  currentDate.getFullYear();
 
-
-
     try {
         db.transaction(function(tx) {
             var rs = tx.executeSql("SELECT amount,desc,date FROM expense WHERE category=? AND date LIKE '%" + date + "%'",[category]);
@@ -238,6 +236,31 @@ function getSpentThisMonthInCategory(category) {
     } catch(e) {
         console.log(e)
         return []
+    }
+    return result;
+}
+
+
+// uglyperiod è tipo 102014 (ottobre 2014)
+function getSpentThisMonth(uglyperiod) {
+    var db = getDatabase();
+    var result = new Array()
+
+    try {
+        db.transaction(function(tx) {
+            var rs = tx.executeSql("SELECT category,amount,desc FROM expense WHERE date LIKE '%" + uglyperiod + "%'");
+            for(var i = 0; i < rs.rows.length; i++) {
+                var dbItem = rs.rows.item(i);
+                result[i] = {
+                    'amount': dbItem.amount,
+                    'desc': dbItem.desc,
+                    'category': dbItem.category
+                }
+            }
+        })
+    } catch(e) {
+        console.log(e);
+        return [];
     }
     return result;
 }
