@@ -43,7 +43,7 @@ Page {
 
             Label {
                 id: descLabel
-                text: "(" + desc + ")"
+                text: desc
                 visible: (desc !== undefined)
                 color: Theme.primaryColor
                 x: Theme.paddingLarge*2
