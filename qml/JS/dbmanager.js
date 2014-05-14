@@ -66,8 +66,7 @@ function getAllMonths() {
                 var year = dbItem.date.substring(4)
                 var item = month + year
 
-                if(res.indexOf(month) === -1) {
-                    console.log(item + " " + res.indexOf(month) + " mese " + month)
+                if(res.indexOf(item) === -1) {
                     res.push(item);
                 }
             }
