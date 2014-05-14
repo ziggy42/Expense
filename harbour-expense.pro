@@ -25,5 +25,7 @@ OTHER_FILES += qml/harbour-expense.qml \
     qml/pages/CategoryPage.qml \
     qml/components/DeleteEntryDialog.qml \
     qml/pages/MonthsPage.qml \
-    qml/components/DeleteCategoryDialog.qml
+    qml/components/DeleteCategoryDialog.qml \
+    qml/JS/preferences.js \
+    qml/pages/SettingsPage.qml
 

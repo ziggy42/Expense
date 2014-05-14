@@ -67,7 +67,7 @@ function getAllMonths() {
                 var item = month + year
 
                 if(res.indexOf(month) === -1) {
-                    console.log(item)
+                    console.log(item + " " + res.indexOf(month) + " mese " + month)
                     res.push(item);
                 }
             }
@@ -170,8 +170,8 @@ function getTotalByMonthAndYear(date) {
         return 0;
     }
 
-    console.log("Input: " + date)
-    console.log("Output: " + result)
+    //console.log("Input: " + date)
+    //console.log("Output: " + result)
 
     return result;
 }

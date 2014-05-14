@@ -2,6 +2,7 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import QtQuick.LocalStorage 2.0
 import "../JS/dbmanager.js" as DBmanager
+import "../JS/preferences.js" as Preferences
 
 
 Page {
@@ -96,7 +97,7 @@ Page {
 
             Label {
                 id: moneyLabel
-                text: totalThisMonth + " €"
+                text: totalThisMonth + " " + Preferences.getCurrency()
                 anchors {horizontalCenter: parent.horizontalCenter}
                 color: Theme.secondaryHighlightColor
                 font.pixelSize: Theme.fontSizeExtraLarge*3
@@ -171,7 +172,7 @@ Page {
 
                     Label {
                         id: amountLabel
-                        text: "amount: " + amount + " €"
+                        text: "amount: " + amount + " " + Preferences.getCurrency()
                         color: Theme.primaryColor
                     }
                 }

@@ -2,10 +2,10 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import QtQuick.LocalStorage 2.0
 import "../JS/dbmanager.js" as DBmanager
-
+import "../JS/preferences.js" as Preferences
 
 Page {
-    id: categoriesPage
+    id: monthsPage
 
     property var months
 
@@ -64,8 +64,6 @@ Page {
         for(var i = 0; i < months.length; i++) {
             monthsModel.append({"month" : months[i]})
         }
-
-        console.log(DBmanager.getFuckingTotal())
     }
 
     SilicaListView {
@@ -89,7 +87,7 @@ Page {
                 minimumValue: 0
                 maximumValue: DBmanager.getFuckingTotal()
                 value: DBmanager.getTotalByMonthAndYear(month)
-                valueText: value + " €"
+                valueText: value + " " + Preferences.getCurrency()
                 label: makeMeACoolMonth(month)
             }
         }

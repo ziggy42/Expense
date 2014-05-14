@@ -2,7 +2,7 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import QtQuick.LocalStorage 2.0
 import "../JS/dbmanager.js" as DBmanager
-
+import "../JS/preferences.js" as Preferences
 
 Page {
     id: page
@@ -24,9 +24,9 @@ Page {
 
     onStatusChanged: {
         if(page.status === PageStatus.Activating) {
-            totalCount = parseInt(DBmanager.getTotalChargeThisMonth(0)) + " €"
-            totalCountLastMonth = "Last Month: " + parseInt(DBmanager.getTotalChargeThisMonth(-1)) + " €"
-            total = "Total: " + parseInt(DBmanager.getFuckingTotal()) + " €"
+            totalCount = parseInt(DBmanager.getTotalChargeThisMonth(0)) + " " + Preferences.getCurrency()
+            totalCountLastMonth = "Last Month: " + parseInt(DBmanager.getTotalChargeThisMonth(-1)) + " " + Preferences.getCurrency()
+            total = "Total: " + parseInt(DBmanager.getFuckingTotal()) + " " + Preferences.getCurrency()
             mostUsedCategory = "Most used category: " + DBmanager.getMostUsedCategory()
         }
     }
@@ -57,15 +57,12 @@ Page {
             }
         }
 
-        /*
         PushUpMenu {
             MenuItem {
                 text: "Settings"
-                onClicked: {
-                    //do something
-                }
+                onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
             }
-        }*/
+        }
 
         contentHeight: column.height
 

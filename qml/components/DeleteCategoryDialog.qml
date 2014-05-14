@@ -30,7 +30,7 @@ Dialog {
     Label {
         id: warningLabel
         anchors {
-            top: deleteCategoryLabxel.bottom
+            top: deleteCategoryLabel.bottom
             topMargin: Theme.paddingLarge
             horizontalCenter: parent.horizontalCenter
         }
@@ -55,7 +55,6 @@ Dialog {
         horizontalAlignment: TextInput.AlignHCenter
         width: parent.width*0.8
         text: "All your data related with this category will be lost!!"
-
     }
 
 
