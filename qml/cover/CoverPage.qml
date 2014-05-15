@@ -2,13 +2,11 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import QtQuick.LocalStorage 2.0
 import "../JS/dbmanager.js" as DBmanager
+import "../JS/preferences.js" as Preferences
 
 CoverBackground {
 
-    onStatusChanged: {
-        //console.log("Status")
-        label.text = parseInt(DBmanager.getTotalChargeThisMonth(0) + " €")
-    }
+    onStatusChanged: label.text = parseInt(DBmanager.getTotalChargeThisMonth(0)) + " " + Preferences.getCurrency()
 
     Label {
         id: headerLabel
@@ -27,7 +25,7 @@ CoverBackground {
         anchors.centerIn: parent
         color: Theme.highlightColor
         font.pixelSize: Theme.fontSizeLarge
-        text: parseInt(DBmanager.getTotalChargeThisMonth(0)) + " €"
+        text: parseInt(DBmanager.getTotalChargeThisMonth(0)) + " " + Preferences.getCurrency()
     }
 }
 

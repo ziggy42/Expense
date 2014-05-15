@@ -64,7 +64,6 @@ Page {
 
     SilicaListView {
         id: listView
-
         model: monthsModel
         anchors.fill: parent
 

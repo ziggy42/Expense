@@ -14,15 +14,12 @@ Page {
 
     Component.onCompleted: {
         var expenses = DBmanager.getSpentThisMonth(uglyperiod)
-        for(var i = 0; i < expenses.length; i++) {
+        for(var i = 0; i < expenses.length; i++)
             monthExpensesModel.append({"amount":expenses[i].amount, "desc":expenses[i].desc, "category":expenses[i].category})
-            console.log(expenses[1].amount + expenses[i].desc + " " + expenses[i].category)
-        }
     }
 
     SilicaListView {
         id: listView
-
         model: monthExpensesModel
         anchors.fill: parent
 

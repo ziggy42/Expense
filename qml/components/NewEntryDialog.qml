@@ -31,12 +31,10 @@ Dialog {
     TextField {
         id: amountField
         width: parent.width
-
         anchors {
             top: newEntryLabel.bottom
             topMargin: Theme.paddingLarge
         }
-
         placeholderText: "Amount"
         inputMethodHints: Qt.ImhFormattedNumbersOnly
     }
@@ -48,7 +46,6 @@ Dialog {
             top: amountField.bottom
             topMargin: Theme.paddingLarge
         }
-
         placeholderText: "Desc"
     }
 
@@ -59,15 +56,12 @@ Dialog {
             topMargin: Theme.paddingLarge
             horizontalCenter: parent.horizontalCenter
         }
-
         spacing: Theme.paddingLarge
 
         Button {
             text: "Choose Category"
             anchors.verticalCenter: parent.verticalCenter
-            onClicked: {
-                categoriesDrawer.open = !categoriesDrawer.open
-            }
+            onClicked: categoriesDrawer.open = !categoriesDrawer.open
         }
 
         Label {
@@ -81,12 +75,9 @@ Dialog {
 
     Drawer {
         id: categoriesDrawer
-
         open: false
-
         width: parent.width
         height: 500*2
-
         anchors {
             top: showCategoriesRow.bottom
             topMargin: Theme.paddingLarge
@@ -116,7 +107,7 @@ Dialog {
     onDone: {
         if (result === DialogResult.Accepted) {
             var currentDate = Qt.formatDateTime(new Date(), "ddMMyyyy");
-            console.log(DBmanager.insertCharge(categoryLabel.text,amountField.text,descField.text,currentDate));
+            DBmanager.insertCharge(categoryLabel.text,amountField.text,descField.text,currentDate)
         }
     }
 }

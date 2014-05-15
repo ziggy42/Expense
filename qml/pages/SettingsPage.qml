@@ -25,9 +25,9 @@ Page {
 
         Column {
             id: column
-
             width: settingsPage.width
             spacing: Theme.paddingSmall
+
             PageHeader {
                 title: "Settings"
             }
@@ -56,9 +56,7 @@ Page {
                 }
                 text: "Contact the Developer"
 
-                onClicked: {
-                    pageStack.push(Qt.resolvedUrl("ContactsPage.qml"))
-                }
+                onClicked: pageStack.push(Qt.resolvedUrl("ContactsPage.qml"))
             }
         }
     }

@@ -2,6 +2,7 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import QtQuick.LocalStorage 2.0
 import "../JS/dbmanager.js" as DBmanager
+import "../JS/preferences.js" as Preferences
 
 Dialog {
     property string category
@@ -35,7 +36,6 @@ Dialog {
             top: newEntryLabel.bottom
             topMargin: Theme.paddingLarge*2
         }
-
         spacing: Theme.paddingLarge
 
         Label {
@@ -46,7 +46,7 @@ Dialog {
 
         Label {
             id: amountLabel
-            text: "amount: " + amount + " €"
+            text: "amount: " + amount + " " + Preferences.getCurrency()
             color: Theme.highlightColor
         }
     }
@@ -65,9 +65,7 @@ Dialog {
     }
 
     onDone: {
-        if (result === DialogResult.Accepted) {
-            console.log(category + " AMOUNT: " + amount + " DESC: " + desc + " DATE: " + date)
+        if (result === DialogResult.Accepted)
             DBmanager.deleteItem(category,amount,desc,date)
-        }
     }
 }

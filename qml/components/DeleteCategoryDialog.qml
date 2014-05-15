@@ -40,7 +40,6 @@ Dialog {
         horizontalAlignment: TextInput.AlignHCenter
         width: parent.width*0.8
         text: "!"
-
     }
 
     Label {
@@ -59,8 +58,7 @@ Dialog {
 
 
     onDone: {
-        if (result === DialogResult.Accepted) {
+        if (result === DialogResult.Accepted)
             DBmanager.deleteCategory(category);
-        }
     }
 }

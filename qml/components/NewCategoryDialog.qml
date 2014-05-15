@@ -28,8 +28,7 @@ Dialog {
     }
 
     onDone: {
-        if (result === DialogResult.Accepted) {
+        if (result === DialogResult.Accepted)
             name = nameField.text
-        }
     }
 }

@@ -23,7 +23,6 @@ Page {
                 onClicked: {
                     var dialog = pageStack.push(Qt.resolvedUrl("../components/NewCategoryDialog.qml"), {"name": newCategory})
                     dialog.accepted.connect(function() {
-                        console.log(DBmanager.insertCategory(dialog.name))
                         categories = DBmanager.getAllCategories()
                     })
                 }
@@ -46,6 +45,7 @@ Page {
                 anchors.verticalCenter: parent.verticalCenter
                 color: delegate.highlighted ? Theme.highlightColor : Theme.primaryColor
             }
+
             onClicked: {
                 pageStack.push(Qt.resolvedUrl("CategoryPage.qml"),{"categoryName":categories[index]})
             }

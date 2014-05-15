@@ -16,9 +16,8 @@ Page {
     function refresh() {
         model.clear()
         expenses = DBmanager.getSpentThisMonthInCategory(categoryName)
-        for(var i = 0; i < expenses.length; i++) {
+        for(var i = 0; i < expenses.length; i++)
             model.append({"amount" : expenses[i].amount, "desc" : expenses[i].desc, "date" : expenses[i].date})
-        }
     }
 
     function makeMeABeautifulDate(date) {
@@ -34,9 +33,8 @@ Page {
         animationTimer.running = true
 
         expenses = DBmanager.getSpentThisMonthInCategory(categoryName)
-        for(var i = 0; i < expenses.length; i++) {
+        for(var i = 0; i < expenses.length; i++)
             model.append({"amount" : expenses[i].amount, "desc" : expenses[i].desc, "date" : expenses[i].date})
-        }
     }
 
     ListModel {id: model}
@@ -71,14 +69,11 @@ Page {
                         percentIndicator.value = 0
                         percentage = DBmanager.getPercentageForCategory(categoryName)
                         animationTimer.running = true
-
                         totalThisMonth = DBmanager.getTotalSpentThisMonthInCategory(categoryName)
-
                         model.clear()
                         expenses = DBmanager.getSpentThisMonthInCategory(categoryName)
-                        for(var i = 0; i < expenses.length; i++) {
+                        for(var i = 0; i < expenses.length; i++)
                             model.append({"amount" : expenses[i].amount, "desc" : expenses[i].desc, "date" : expenses[i].date})
-                        }
                     })
                 }
             }
@@ -88,9 +83,9 @@ Page {
 
         Column {
             id: column
-
             width: page.width
             spacing: Theme.paddingSmall
+
             PageHeader {
                 title: categoryName
             }
@@ -104,9 +99,7 @@ Page {
             }
 
             Label {
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                }
+                anchors {horizontalCenter: parent.horizontalCenter}
                 text: "in " + categoryName + " this month"
                 color: Theme.secondaryHighlightColor
                 font.pixelSize: Theme.fontSizeLarge
@@ -121,9 +114,7 @@ Page {
                 top: column.bottom
                 topMargin: Theme.paddingLarge
             }
-
             width: parent.width
-
             minimumValue: 0
             maximumValue: 100
             value: 0
@@ -150,7 +141,6 @@ Page {
                 top: insertionsLabel.bottom
                 topMargin: Theme.paddingLarge
             }
-
             clip:true
             width: parent.width
             height: page.height - column.height - percentIndicator.height - insertionsLabel.height - Theme.paddingLarge*2*1.2 - Theme.paddingSmall
@@ -190,15 +180,12 @@ Page {
                 }
 
                 onPressAndHold: {
-                    console.log("Delete current Item")
                     var dialog = pageStack.push(Qt.resolvedUrl("../components/DeleteEntryDialog.qml"),{"category":categoryName,"amount": amount, "desc": desc, "date": date})
                     dialog.accepted.connect(function() {
                         percentIndicator.value = 0
                         percentage = DBmanager.getPercentageForCategory(categoryName)
                         animationTimer.running = true
-
                         totalThisMonth = DBmanager.getTotalSpentThisMonthInCategory(categoryName)
-
                         refresh()
                     })
                 }

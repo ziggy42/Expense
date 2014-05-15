@@ -13,13 +13,8 @@ Page {
     property alias mostUsedCategory: mostUsedCategoryLabel.text
 
     Component.onCompleted: {
-        //DBmanager.reset() //for test use only
-        //DBmanager.initializeDatabase()  //for test only
-
-        console.log("Numero Tabelle: " + DBmanager.getNumberOftables())
-        if(DBmanager.getNumberOftables() !== 2) {
+        if(DBmanager.getNumberOftables() !== 2)
             DBmanager.initializeDatabase()
-        }
     }
 
     onStatusChanged: {
@@ -49,8 +44,8 @@ Page {
                 onClicked: {
                     var dialog = pageStack.push(Qt.resolvedUrl("../components/NewEntryDialog.qml"))
                     dialog.accepted.connect(function() {
-                        totalCount = parseInt(DBmanager.getTotalChargeThisMonth(0)) + " €"
-                        total = "Total: " + parseInt(DBmanager.getFuckingTotal()) + " €"
+                        totalCount = parseInt(DBmanager.getTotalChargeThisMonth(0)) + " " + Preferences.getCurrency()
+                        total = "Total: " + parseInt(DBmanager.getFuckingTotal()) + " " + Preferences.getCurrency()
                         mostUsedCategory = "Most used category: " + DBmanager.getMostUsedCategory()
                     })
                 }
@@ -68,25 +63,22 @@ Page {
 
         Column {
             id: column
-
             width: page.width
             spacing: Theme.paddingSmall
+
             PageHeader {
                 title: "Expense"
             }
 
-
             Label {
                 id: moneyLabel
-                anchors {horizontalCenter: parent.horizontalCenter}
+                anchors { horizontalCenter: parent.horizontalCenter }
                 color: Theme.secondaryHighlightColor
                 font.pixelSize: Theme.fontSizeExtraLarge*3
             }
 
             Label {
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                }
+                anchors { horizontalCenter: parent.horizontalCenter }
                 text: "spent this month"
                 color: Theme.secondaryHighlightColor
                 font.pixelSize: Theme.fontSizeLarge
@@ -95,7 +87,6 @@ Page {
 
         Label {
             id: lastMonthLabel
-
             anchors {
                 horizontalCenter: parent.horizontalCenter
                 top: column.bottom
