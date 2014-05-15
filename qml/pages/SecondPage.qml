@@ -23,6 +23,7 @@ Page {
                 onClicked: {
                     var dialog = pageStack.push(Qt.resolvedUrl("../components/NewCategoryDialog.qml"), {"name": newCategory})
                     dialog.accepted.connect(function() {
+                        DBmanager.insertCategory(dialog.name)
                         categories = DBmanager.getAllCategories()
                     })
                 }
