@@ -100,12 +100,11 @@ function insertCharge(category,amount,desc,date) {
         return "Something is null"
     }
 
-    // non serve
-    var float = parseFloat(amount)
+    var value = parseFloat(amount.replace(',', '.'))
 
     db.transaction(
         function(tx) {
-            var rs = tx.executeSql('INSERT INTO expense VALUES (?,?,?,?);', [category,float,desc,date]);
+            var rs = tx.executeSql('INSERT INTO expense VALUES (?,?,?,?);', [category,value,desc,date]);
             if (rs.rowsAffected > 0) {
                 res = "OK";
             } else {
