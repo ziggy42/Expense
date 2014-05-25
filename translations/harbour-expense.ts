@@ -130,6 +130,10 @@
         <comment>1 is amount, 2 is currency and 3 is the category</comment>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Today</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MonthsPage</name>
