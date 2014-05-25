@@ -130,6 +130,10 @@
         <comment>1 is amount, 2 is currency and 3 is the category</comment>
         <translation>%1 %2 in %3</translation>
     </message>
+    <message>
+        <source>Today</source>
+        <translation>Heute</translation>
+    </message>
 </context>
 <context>
     <name>MonthsPage</name>
