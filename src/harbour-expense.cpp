@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
     * for that + ".qm"; if not found, it will look for a
     * qml-translations.qm file; if not found, no translation is done
     */
-    if (translator.load("harbour-expense-" + locale, SailfishApp::pathTo("translations").path()))
+    if (translator.load("harbour-expense." + locale, SailfishApp::pathTo("translations").path()))
         app->installTranslator(&translator);
 
     QQuickView* viewer = SailfishApp::createView();
