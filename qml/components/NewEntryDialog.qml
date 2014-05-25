@@ -14,6 +14,7 @@ Dialog {
     Component.onCompleted: {
         categories = DBmanager.getAllCategories()
         if(category !== "") categoryLabel.text = category
+        amountField.focus = true
     }
 
     Label {
