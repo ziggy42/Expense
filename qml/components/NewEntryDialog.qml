@@ -2,6 +2,7 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import QtQuick.LocalStorage 2.0
 import "../JS/dbmanager.js" as DBmanager
+import "../JS/preferences.js" as Preferences
 
 Dialog {
     property string category
@@ -12,6 +13,8 @@ Dialog {
     property alias categories: silicaListView.model
 
     Component.onCompleted: {
+        Preferences.set("DIALOG_OPENED",1);
+
         categories = DBmanager.getAllCategories()
         if(category !== "") categoryLabel.text = category
         amountField.focus = true
@@ -110,5 +113,6 @@ Dialog {
             var currentDate = Qt.formatDateTime(new Date(), "ddMMyyyy");
             DBmanager.insertCharge(categoryLabel.text,amountField.text,descField.text,currentDate)
         }
+        Preferences.set("DIALOG_OPENED",0);
     }
 }

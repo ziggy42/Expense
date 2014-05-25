@@ -44,7 +44,9 @@ CoverBackground {
         CoverAction {
             iconSource: "image://theme/icon-cover-new"
             onTriggered: {
-                var dialog = pageStack.push(Qt.resolvedUrl("../components/NewEntryDialog.qml"))
+                if(Preferences.get("DIALOG_OPENED",0) === '0') {
+                    var dialog = pageStack.push(Qt.resolvedUrl("../components/NewEntryDialog.qml"));
+                }
                 appWindow.activate();
             }
         }
