@@ -57,14 +57,14 @@ Page {
 
         PullDownMenu {
             MenuItem {
-                text: "Delete Category"
+                text: qsTr("Delete Category")
                 onClicked: {
                     var dialog = pageStack.push(Qt.resolvedUrl("../components/DeleteCategoryDialog.qml"),{"category":categoryName})
                 }
             }
 
             MenuItem {
-                text: "Add"
+                text: qsTr("Add Category")
                 onClicked: {
                     var dialog = pageStack.push(Qt.resolvedUrl("../components/NewEntryDialog.qml"),{"category":categoryName})
                     dialog.accepted.connect(function() {
@@ -94,7 +94,7 @@ Page {
 
             Label {
                 id: moneyLabel
-                text: totalThisMonth + " " + Preferences.getCurrency()
+                text: qsTr("%1 %2", "1 is amount and 2 is currency").arg(totalThisMonth).arg(Preferences.getCurrency())
                 anchors {horizontalCenter: parent.horizontalCenter}
                 color: Theme.secondaryHighlightColor
                 font.pixelSize: Theme.fontSizeExtraLarge*3
@@ -102,7 +102,7 @@ Page {
 
             Label {
                 anchors {horizontalCenter: parent.horizontalCenter}
-                text: "in " + categoryName + " this month"
+                text: qsTr("in %1 this month", "subtitle of the amount spent in the CategoryView").arg(categoryName)
                 color: Theme.secondaryHighlightColor
                 font.pixelSize: Theme.fontSizeLarge
             }
@@ -120,8 +120,8 @@ Page {
             minimumValue: 0
             maximumValue: 100
             value: 0
-            valueText: value + "%"
-            label: "of the total"
+            valueText: qsTr("%1 %").arg(value)
+            label: qsTr("of the total", "subtitle of the percentagebar")
         }
 
         Label {
@@ -133,7 +133,7 @@ Page {
             }
             color: Theme.secondaryHighlightColor
             font.pixelSize: Theme.fontSizeLarge
-            text: "This month:"
+            text: qsTr("This month:")
         }
 
         SilicaListView {
@@ -164,7 +164,7 @@ Page {
 
                     Label {
                         id: amountLabel
-                        text: "amount: " + amount + " " + Preferences.getCurrency()
+                        text: qsTr("amount: %1 %2", "1 is amount and 2 is currency").arg(amount).arg(Preferences.getCurrency())
                         color: Theme.primaryColor
                     }
                 }

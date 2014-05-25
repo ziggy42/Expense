@@ -34,18 +34,31 @@
 
 #include <sailfishapp.h>
 
+#include <QTranslator>
+#include <QLocale>
 
 int main(int argc, char *argv[])
 {
-    // SailfishApp::main() will display "qml/template.qml", if you need more
-    // control over initialization, you can use:
-    //
-    //   - SailfishApp::application(int, char *[]) to get the QGuiApplication *
-    //   - SailfishApp::createView() to get a new QQuickView * instance
-    //   - SailfishApp::pathTo(QString) to get a QUrl to a resource file
-    //
-    // To display the view, call "show()" (will show fullscreen on device).
+    QGuiApplication *app = SailfishApp::application(argc, argv);
 
-    return SailfishApp::main(argc, argv);
+    QString locale = QLocale::system().name();
+    qDebug() << "detected locale is " << locale;
+    QTranslator translator;
+    /* the ":/" is a special directory Qt uses to
+    * distinguish resources;
+    * NB this will look for a filename matching locale + ".qm";
+    * if that's not found, it will truncate the locale to
+    * the first two characters (e.g. "en_GB" to "en") and look
+    * for that + ".qm"; if not found, it will look for a
+    * qml-translations.qm file; if not found, no translation is done
+    */
+    if (translator.load("harbour-expense." + locale, SailfishApp::pathTo("translations").path()))
+        app->installTranslator(&translator);
+
+    QQuickView* viewer = SailfishApp::createView();
+    viewer->setSource(SailfishApp::pathTo("qml/harbour-expense.qml"));
+    viewer->show();
+
+    return app->exec();
 }
 

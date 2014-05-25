@@ -63,7 +63,10 @@ Page {
             Label {
                 x: Theme.paddingLarge*2
                 id: dateAmountRow
-                text: amount + " " + Preferences.getCurrency() + " in " + category
+                text: qsTr("%1 %2 in %3", "1 is amount, 2 is currency and 3 is the category")
+                            .arg(amount)
+                            .arg(Preferences.getCurrency())
+                            .arg(category)
                 color: Theme.highlightColor
             }
 

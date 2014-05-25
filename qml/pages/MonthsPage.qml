@@ -31,7 +31,7 @@ Page {
         anchors.fill: parent
 
         header: PageHeader {
-            title: "History"
+            title: qsTr("History")
         }
 
         delegate: BackgroundItem {
@@ -45,7 +45,7 @@ Page {
                 minimumValue: 0
                 maximumValue: DBmanager.getFuckingTotal()
                 value: DBmanager.getTotalByMonthAndYear(month)
-                valueText: value + " " + Preferences.getCurrency()
+                valueText: qsTr("%1 %2", "1 is amount and 2 is currency").arg(value).arg(Preferences.getCurrency())
                 label: makeMeACoolMonth(month)
             }
 

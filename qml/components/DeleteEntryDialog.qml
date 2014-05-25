@@ -21,7 +21,7 @@ Dialog {
 
     Label {
         id: newEntryLabel
-        text: "Delete Item"
+        text: qsTr("Delete Item")
         anchors {
             top: parent.top
             topMargin: Theme.paddingLarge
@@ -48,7 +48,7 @@ Dialog {
 
         Label {
             id: amountLabel
-            text: "amount: " + amount + " " + Preferences.getCurrency()
+            text: qsTr("amount: %1 %2", "1 is amount and 2 is currency").arg(amount).arg(Preferences.getCurrency())
             color: Theme.highlightColor
         }
     }
