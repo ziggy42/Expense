@@ -21,10 +21,11 @@ Page {
     }
 
     function makeMeABeautifulDate(date) {
-        var day = date.substring(0,2)
-        var month = date.substring(2,4)
-        var year = date.substring(6)
-        return day + "-" + month + "-" + year
+        var d = new Date(parseInt(date.substring(4,8)),
+                         parseInt(date.substring(2,4)),
+                         parseInt(date.substring(0,2)))
+
+        return Qt.formatDate(d, Qt.DefaultLocaleShortDate)
     }
 
     Component.onCompleted: {
