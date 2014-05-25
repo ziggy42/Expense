@@ -14,8 +14,28 @@ Page {
 
     Component.onCompleted: {
         var expenses = DBmanager.getSpentThisMonth(uglyperiod)
-        for(var i = 0; i < expenses.length; i++)
-            monthExpensesModel.append({"amount":expenses[i].amount, "desc":expenses[i].desc, "category":expenses[i].category})
+        var now = new Date()
+        for(var i = 0; i < expenses.length; i++) {
+            // note: constructor takes months values (0-11)!!
+            var d = new Date(parseInt(expenses[i].date.substring(4,8)),
+                             parseInt(expenses[i].date.substring(2,4)-1),
+                             parseInt(expenses[i].date.substring(0,2)))
+            console.log("'" + now.getDate() + "'" +
+                        now.getMonth() + "'" +
+                        now.getFullYear() + "'")
+            console.log("'" + d.getDate() + "'" +
+                        d.getMonth() + "'" +
+                        d.getFullYear() + "'")
+            var formatedDate = Qt.formatDate(d, Qt.DefaultLocaleShortDate)
+            if (d.getDate() === now.getDate() && d.getMonth() === now.getMonth() && d.getFullYear() === now.getFullYear())
+                formatedDate = qsTr('Today')
+
+            monthExpensesModel.append({ "amount":   expenses[i].amount,
+                                        "desc":     expenses[i].desc,
+                                        "category": expenses[i].category,
+                                        "date":     formatedDate
+                                      })
+        }
     }
 
     SilicaListView {
@@ -25,6 +45,15 @@ Page {
 
         header: PageHeader {
             title: period
+        }
+
+        section {
+            property: 'date'
+
+            delegate: SectionHeader {
+                text: section
+                height: Theme.itemSizeExtraSmall
+            }
         }
 
         delegate: BackgroundItem {
