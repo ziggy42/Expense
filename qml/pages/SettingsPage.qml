@@ -29,7 +29,7 @@ Page {
             spacing: Theme.paddingSmall
 
             PageHeader {
-                title: "Settings"
+                title: qsTr("Settings")
             }
 
             ComboBox {
