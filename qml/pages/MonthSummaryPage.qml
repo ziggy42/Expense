@@ -16,8 +16,9 @@ Page {
         var expenses = DBmanager.getSpentThisMonth(uglyperiod)
         var now = new Date()
         for(var i = 0; i < expenses.length; i++) {
+            // note: constructor takes months values (0-11)!!
             var d = new Date(parseInt(expenses[i].date.substring(4,8)),
-                             parseInt(expenses[i].date.substring(2,4)),
+                             parseInt(expenses[i].date.substring(2,4)-1),
                              parseInt(expenses[i].date.substring(0,2)))
             console.log("'" + now.getDate() + "'" +
                         now.getMonth() + "'" +
