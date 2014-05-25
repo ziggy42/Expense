@@ -13,7 +13,7 @@ Page {
 
         PullDownMenu {
             MenuItem {
-                text: "Restore Default"
+                text: qsTr("Restore Default")
                 onClicked: {
                     Preferences.set("Currency",0)
                     currencyComboBox.currentIndex = 0
@@ -36,7 +36,7 @@ Page {
                 id: currencyComboBox
                 width: parent.width * 0.75
                 anchors {horizontalCenter: parent.horizontalCenter}
-                label: "Currency: "
+                label: qsTr("Currency: ")
                 currentIndex: Preferences.get("Currency",0)
 
                 menu: ContextMenu {
@@ -54,7 +54,7 @@ Page {
                 anchors {
                     horizontalCenter: parent.horizontalCenter
                 }
-                text: "Contact the Developer"
+                text: qsTr("Contact the Developer")
 
                 onClicked: pageStack.push(Qt.resolvedUrl("ContactsPage.qml"))
             }

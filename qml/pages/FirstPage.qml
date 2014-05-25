@@ -20,9 +20,13 @@ Page {
     onStatusChanged: {
         if(page.status === PageStatus.Activating) {
             totalCount = parseInt(DBmanager.getTotalChargeThisMonth(0)) + " " + Preferences.getCurrency()
-            totalCountLastMonth = "Last Month: " + parseInt(DBmanager.getTotalChargeThisMonth(-1)) + " " + Preferences.getCurrency()
-            total = "Total: " + parseInt(DBmanager.getFuckingTotal()) + " " + Preferences.getCurrency()
-            mostUsedCategory = "Most used category: " + DBmanager.getMostUsedCategory()
+            totalCountLastMonth = qsTr("Last Month: %1 %2", "1 is amount and 2 is currency")
+                                    .arg(parseInt(DBmanager.getTotalChargeThisMonth(-1)))
+                                    .arg(Preferences.getCurrency())
+            total = qsTr("Total: %1 %2", "1 is amount and 2 is currency")
+                                    .arg(parseInt(DBmanager.getFuckingTotal()))
+                                    .arg(Preferences.getCurrency())
+            mostUsedCategory = qsTr("Most used category: %1").arg(DBmanager.getMostUsedCategory())
         }
     }
 
@@ -31,22 +35,24 @@ Page {
 
         PullDownMenu {
             MenuItem {
-                text: "History"
+                text: qsTr("History")
                 onClicked: pageStack.push(Qt.resolvedUrl("MonthsPage.qml"))
             }
 
             MenuItem {
-                text: "Categories"
+                text: qsTr("Categories")
                 onClicked: pageStack.push(Qt.resolvedUrl("SecondPage.qml"))
             }
             MenuItem {
-                text: "Quick Add"
+                text: qsTr("Quick Add")
                 onClicked: {
                     var dialog = pageStack.push(Qt.resolvedUrl("../components/NewEntryDialog.qml"))
                     dialog.accepted.connect(function() {
                         totalCount = parseInt(DBmanager.getTotalChargeThisMonth(0)) + " " + Preferences.getCurrency()
-                        total = "Total: " + parseInt(DBmanager.getFuckingTotal()) + " " + Preferences.getCurrency()
-                        mostUsedCategory = "Most used category: " + DBmanager.getMostUsedCategory()
+                        total = qsTr("Total: %1 %2", "1 is amount and 2 is currency")
+                                    .arg(parseInt(DBmanager.getFuckingTotal()))
+                                    .arg(Preferences.getCurrency())
+                        mostUsedCategory = qsTr("Most used category: %1").arg(DBmanager.getMostUsedCategory())
                     })
                 }
             }
@@ -54,7 +60,7 @@ Page {
 
         PushUpMenu {
             MenuItem {
-                text: "Settings"
+                text: qsTr("Settings")
                 onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
             }
         }
@@ -67,7 +73,7 @@ Page {
             spacing: Theme.paddingSmall
 
             PageHeader {
-                title: "Expense"
+                title: qsTr("Expense", "This is the App Title")
             }
 
             Label {
@@ -79,7 +85,7 @@ Page {
 
             Label {
                 anchors { horizontalCenter: parent.horizontalCenter }
-                text: "spent this month"
+                text: qsTr("spent this month", "subtitle of the amount spent in the MainView")
                 color: Theme.secondaryHighlightColor
                 font.pixelSize: Theme.fontSizeLarge
             }
@@ -98,7 +104,7 @@ Page {
 
         Label {
             id: totalLabel
-            text: "Total: 5899 €"
+            text: ""
             anchors {
                 horizontalCenter: parent.horizontalCenter
                 top: lastMonthLabel.bottom
@@ -110,7 +116,7 @@ Page {
 
         Label {
             id: mostUsedCategoryLabel
-            text: "Most used category: Heroin"
+            text: ""
             anchors {
                 horizontalCenter: parent.horizontalCenter
                 top: totalLabel.bottom

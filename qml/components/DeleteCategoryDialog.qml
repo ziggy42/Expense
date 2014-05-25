@@ -17,7 +17,7 @@ Dialog {
 
     Label {
         id: deleteCategoryLabel
-        text: "Delete Category"
+        text: qsTr("Delete Category")
         anchors {
             top: parent.top
             topMargin: Theme.paddingLarge
@@ -39,7 +39,7 @@ Dialog {
         wrapMode: Text.WordWrap
         horizontalAlignment: TextInput.AlignHCenter
         width: parent.width*0.8
-        text: "!"
+        text: qsTr("!", "The exclamation mark in the DeleteCategory View")
     }
 
     Label {
@@ -53,7 +53,7 @@ Dialog {
         wrapMode: Text.WordWrap
         horizontalAlignment: TextInput.AlignHCenter
         width: parent.width*0.8
-        text: "All your data related with this category will be lost!!"
+        text: qsTr("All your data related with this category (%1) will be lost!!").arg(category)
     }
 
 

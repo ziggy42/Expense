@@ -18,7 +18,7 @@ Dialog {
 
     Label {
         id: newEntryLabel
-        text: "New Entry"
+        text: qsTr("New Entry")
         anchors {
             top: parent.top
             topMargin: Theme.paddingLarge
@@ -35,7 +35,7 @@ Dialog {
             top: newEntryLabel.bottom
             topMargin: Theme.paddingLarge
         }
-        placeholderText: "Amount"
+        placeholderText: qsTr("Amount", "placeholder for amount")
         inputMethodHints: Qt.ImhFormattedNumbersOnly
     }
 
@@ -46,7 +46,7 @@ Dialog {
             top: amountField.bottom
             topMargin: Theme.paddingLarge
         }
-        placeholderText: "Desc"
+        placeholderText: qsTr("Desc", "placeholder for description")
     }
 
     Row {
@@ -59,7 +59,7 @@ Dialog {
         spacing: Theme.paddingLarge
 
         Button {
-            text: "Choose Category"
+            text: qsTr("Choose Category")
             anchors.verticalCenter: parent.verticalCenter
             onClicked: categoriesDrawer.open = !categoriesDrawer.open
         }

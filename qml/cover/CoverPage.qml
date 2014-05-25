@@ -6,7 +6,9 @@ import "../JS/preferences.js" as Preferences
 
 CoverBackground {
 
-    onStatusChanged: label.text = parseInt(DBmanager.getTotalChargeThisMonth(0)) + " " + Preferences.getCurrency()
+    onStatusChanged: label.text = qsTr("%1 %2", "1 is amount and 2 is currency")
+                                        .arg(parseInt(DBmanager.getTotalChargeThisMonth(0)))
+                                        .arg(Preferences.getCurrency())
 
     Label {
         id: headerLabel
@@ -15,7 +17,7 @@ CoverBackground {
             bottomMargin: 10
             horizontalCenter: parent.horizontalCenter
         }
-        text: "This month:"
+        text: qsTr("This month:")
         color: Theme.highlightColor
         font.pixelSize: Theme.fontSizeLarge
     }
@@ -25,7 +27,9 @@ CoverBackground {
         anchors.centerIn: parent
         color: Theme.highlightColor
         font.pixelSize: Theme.fontSizeLarge
-        text: parseInt(DBmanager.getTotalChargeThisMonth(0)) + " " + Preferences.getCurrency()
+        text: qsTr("%1 %2", "1 is amount and 2 is currency")
+                .arg(parseInt(DBmanager.getTotalChargeThisMonth(0)))
+                .arg(Preferences.getCurrency())
     }
 }
 

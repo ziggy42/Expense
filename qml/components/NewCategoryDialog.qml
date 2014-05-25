@@ -6,7 +6,7 @@ Dialog {
 
     Label {
         id: selectLabel
-        text: "Choose a Name"
+        text: qsTr("Choose a Name")
         anchors {
             top: parent.top
             topMargin: Theme.paddingLarge
@@ -24,7 +24,7 @@ Dialog {
             topMargin: Theme.paddingLarge
         }
 
-        placeholderText: "Name"
+        placeholderText: qsTr("Name", "placeholder for category name")
     }
 
     onDone: {
