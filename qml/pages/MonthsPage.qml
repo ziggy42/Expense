@@ -11,49 +11,12 @@ Page {
 
     ListModel {id: monthsModel}
 
-    function makeMeACoolMonth(temp) {
-        var month = temp.substring(0,2);
-        var monthStr = ""
+    function makeMeACoolMonth(date) {
+        // note: constructor takes months values (0-11)!!
+        var d = new Date(parseInt(date.substring(2,6)),
+                         parseInt(date.substring(0,2)-1))
 
-        switch(parseInt(month)) {
-            case 1:
-                monthStr = "January"
-                break;
-            case 2:
-                monthStr = "February"
-                break;
-            case 3:
-                monthStr = "March"
-                break;
-            case 4:
-                monthStr = "April"
-                break;
-            case 5:
-                monthStr = "May"
-                break;
-            case 6:
-                monthStr = "June"
-                break;
-            case 7:
-                monthStr = "July"
-                break;
-            case 8:
-                monthStr = "August"
-                break;
-            case 9:
-                monthStr = "September"
-                break;
-            case 10:
-                monthStr = "October"
-                break;
-            case 11:
-                monthStr = "November"
-                break;
-            case 12:
-                monthStr = "December"
-                break;
-        }
-        return monthStr + " " + temp.substring(2);
+        return Qt.formatDate(d, "MMMM yyyy")
     }
 
     Component.onCompleted: {
