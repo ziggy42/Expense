@@ -21,8 +21,9 @@ Page {
     }
 
     function makeMeABeautifulDate(date) {
+        // note: constructor takes months values (0-11)!!
         var d = new Date(parseInt(date.substring(4,8)),
-                         parseInt(date.substring(2,4)),
+                         parseInt(date.substring(2,4)-1),
                          parseInt(date.substring(0,2)))
 
         return Qt.formatDate(d, Qt.DefaultLocaleShortDate)
