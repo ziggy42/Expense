@@ -23,7 +23,7 @@ OTHER_FILES += qml/harbour-expense.qml \
     rpm/harbour-expense.changes.in \
     rpm/harbour-expense.spec \
     rpm/harbour-expense.yaml \
-    translations/*.ts \
+    translations/harbour-expense*.ts \
     harbour-expense.desktop \
     qml/JS/dbmanager.js \
     qml/JS/preferences.js \
@@ -40,5 +40,5 @@ OTHER_FILES += qml/harbour-expense.qml \
 # to disable building translations every time, comment out the
 # following CONFIG line
 CONFIG += sailfishapp_i18n
-TRANSLATIONS += translations/harbour-expense-de.ts
+TRANSLATIONS += translations/harbour-expense.de.ts
 

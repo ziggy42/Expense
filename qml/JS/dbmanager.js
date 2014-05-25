@@ -247,13 +247,14 @@ function getSpentThisMonth(uglyperiod) {
 
     try {
         db.transaction(function(tx) {
-            var rs = tx.executeSql("SELECT category,amount,desc FROM expense WHERE date LIKE '%" + uglyperiod + "%'");
+            var rs = tx.executeSql("SELECT category,amount,desc,date FROM expense WHERE date LIKE '%" + uglyperiod + "%' ORDER BY date DESC");
             for(var i = 0; i < rs.rows.length; i++) {
                 var dbItem = rs.rows.item(i);
                 result[i] = {
                     'amount': dbItem.amount,
                     'desc': dbItem.desc,
-                    'category': dbItem.category
+                    'category': dbItem.category,
+                    'date': dbItem.date
                 }
             }
         })

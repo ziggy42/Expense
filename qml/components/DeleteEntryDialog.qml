@@ -11,15 +11,17 @@ Dialog {
     property string date
 
     function makeMeABeautifulDate(date) {
-        var day = date.substring(0,2)
-        var month = date.substring(2,4)
-        var year = date.substring(6)
-        return day + "-" + month + "-" + year
+        // note: constructor takes months values (0-11)!!
+        var d = new Date(parseInt(date.substring(4,8)),
+                         parseInt(date.substring(2,4)-1),
+                         parseInt(date.substring(0,2)))
+
+        return Qt.formatDate(d, Qt.DefaultLocaleShortDate)
     }
 
     Label {
         id: newEntryLabel
-        text: "Delete Item"
+        text: qsTr("Delete Item")
         anchors {
             top: parent.top
             topMargin: Theme.paddingLarge
@@ -46,7 +48,7 @@ Dialog {
 
         Label {
             id: amountLabel
-            text: "amount: " + amount + " " + Preferences.getCurrency()
+            text: qsTr("amount: %1 %2", "1 is amount and 2 is currency").arg(amount).arg(Preferences.getCurrency())
             color: Theme.highlightColor
         }
     }

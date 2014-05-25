@@ -1,83 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0">
+<TS version="2.0" language="de_DE">
 <context>
     <name>CategoryPage</name>
     <message>
         <source>Delete Category</source>
-        <translation type="unfinished"></translation>
+        <translation>Kategorie löschen</translation>
     </message>
     <message>
         <source>Add Category</source>
-        <translation type="unfinished"></translation>
+        <translation>Kategorie hinzufügen</translation>
     </message>
     <message>
         <source>in %1 this month</source>
         <comment>subtitle of the amount spent in the CategoryView</comment>
-        <translation type="unfinished"></translation>
+        <translation>diesen Monat in %1</translation>
     </message>
     <message>
         <source>%1 %</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 %</translation>
     </message>
     <message>
         <source>of the total</source>
         <comment>subtitle of the percentagebar</comment>
-        <translation type="unfinished"></translation>
+        <translation>des Gesamtbetrags</translation>
     </message>
     <message>
         <source>This month:</source>
-        <translation type="unfinished"></translation>
+        <translation>Diesen Monat:</translation>
     </message>
     <message>
         <source>amount: %1 %2</source>
         <comment>1 is amount and 2 is currency</comment>
-        <translation type="unfinished"></translation>
+        <translation>Betrag: %1 %2</translation>
     </message>
     <message>
         <source>%1 %2</source>
         <comment>1 is amount and 2 is currency</comment>
-        <translation type="unfinished"></translation>
+        <translation>%1 %2</translation>
     </message>
 </context>
 <context>
     <name>CoverPage</name>
     <message>
         <source>This month:</source>
-        <translation type="unfinished"></translation>
+        <translation>Diesen Monat:</translation>
     </message>
     <message>
         <source>%1 %2</source>
         <comment>1 is amount and 2 is currency</comment>
-        <translation type="unfinished"></translation>
+        <translation>%1 %2</translation>
     </message>
 </context>
 <context>
     <name>DeleteCategoryDialog</name>
     <message>
         <source>Delete Category</source>
-        <translation type="unfinished"></translation>
+        <translation>Kategorie löschen</translation>
     </message>
     <message>
         <source>!</source>
         <comment>The exclamation mark in the DeleteCategory View</comment>
-        <translation type="unfinished"></translation>
+        <translation>!</translation>
     </message>
     <message>
         <source>All your data related with this category (%1) will be lost!!</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle Daten in dieser Kategorie (%1) werden verloren gehen!!</translation>
     </message>
 </context>
 <context>
     <name>DeleteEntryDialog</name>
     <message>
         <source>Delete Item</source>
-        <translation type="unfinished"></translation>
+        <translation>Eintrag löschen</translation>
     </message>
     <message>
         <source>amount: %1 %2</source>
         <comment>1 is amount and 2 is currency</comment>
-        <translation type="unfinished"></translation>
+        <translation>Betrag: %1 %2</translation>
     </message>
 </context>
 <context>
@@ -85,42 +85,42 @@
     <message>
         <source>Last Month: %1 %2</source>
         <comment>1 is amount and 2 is currency</comment>
-        <translation type="unfinished"></translation>
+        <translation>Letzten Monat: %1 %2</translation>
     </message>
     <message>
         <source>Total: %1 %2</source>
         <comment>1 is amount and 2 is currency</comment>
-        <translation type="unfinished"></translation>
+        <translation>Gesamt: %1 %2</translation>
     </message>
     <message>
         <source>Most used category: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Meist genutzte Kategorie: %1</translation>
     </message>
     <message>
         <source>History</source>
-        <translation type="unfinished"></translation>
+        <translation>Verlauf</translation>
     </message>
     <message>
         <source>Categories</source>
-        <translation type="unfinished"></translation>
+        <translation>Kategorien</translation>
     </message>
     <message>
         <source>Quick Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Hinzufügen</translation>
     </message>
     <message>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Einstellungen</translation>
     </message>
     <message>
         <source>spent this month</source>
         <comment>subtitle of the amount spent in the MainView</comment>
-        <translation type="unfinished"></translation>
+        <translation>diesen Monat ausgegeben</translation>
     </message>
     <message>
         <source>Expense</source>
         <comment>This is the App Title</comment>
-        <translation type="unfinished"></translation>
+        <translation>Expense</translation>
     </message>
 </context>
 <context>
@@ -128,82 +128,82 @@
     <message>
         <source>%1 %2 in %3</source>
         <comment>1 is amount, 2 is currency and 3 is the category</comment>
-        <translation type="unfinished"></translation>
+        <translation>%1 %2 in %3</translation>
     </message>
 </context>
 <context>
     <name>MonthsPage</name>
     <message>
         <source>History</source>
-        <translation type="unfinished"></translation>
+        <translation>Verlauf</translation>
     </message>
     <message>
         <source>%1 %2</source>
         <comment>1 is amount and 2 is currency</comment>
-        <translation type="unfinished"></translation>
+        <translation>%1 %2</translation>
     </message>
 </context>
 <context>
     <name>NewCategoryDialog</name>
     <message>
         <source>Choose a Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Wähle einen Namen</translation>
     </message>
     <message>
         <source>Name</source>
         <comment>placeholder for category name</comment>
-        <translation type="unfinished"></translation>
+        <translation>Name</translation>
     </message>
 </context>
 <context>
     <name>NewEntryDialog</name>
     <message>
         <source>New Entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Neuer Eintrag</translation>
     </message>
     <message>
         <source>Amount</source>
         <comment>placeholder for amount</comment>
-        <translation type="unfinished"></translation>
+        <translation>Betrag</translation>
     </message>
     <message>
         <source>Desc</source>
         <comment>placeholder for description</comment>
-        <translation type="unfinished"></translation>
+        <translation>Beschreibung</translation>
     </message>
     <message>
         <source>Choose Category</source>
-        <translation type="unfinished"></translation>
+        <translation>Wähle die Kategorie</translation>
     </message>
 </context>
 <context>
     <name>SecondPage</name>
     <message>
         <source>Add Category</source>
-        <translation type="unfinished"></translation>
+        <translation>Kategorie hinzufügen</translation>
     </message>
     <message>
         <source>Categories</source>
-        <translation type="unfinished"></translation>
+        <translation>Kategorien</translation>
     </message>
 </context>
 <context>
     <name>SettingsPage</name>
     <message>
         <source>Restore Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Standard wiederherstellen</translation>
     </message>
     <message>
         <source>Currency: </source>
-        <translation type="unfinished"></translation>
+        <translation>Währung: </translation>
     </message>
     <message>
         <source>Contact the Developer</source>
-        <translation type="unfinished"></translation>
+        <translation>Den Entwickler kontaktieren</translation>
     </message>
     <message>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Einstellungen</translation>
     </message>
 </context>
 </TS>

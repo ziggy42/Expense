@@ -19,7 +19,7 @@ Page {
 
         PullDownMenu {
             MenuItem {
-                text: "Add Category"
+                text: qsTr("Add Category")
                 onClicked: {
                     var dialog = pageStack.push(Qt.resolvedUrl("../components/NewCategoryDialog.qml"), {"name": newCategory})
                     dialog.accepted.connect(function() {
@@ -34,7 +34,7 @@ Page {
         anchors.fill: parent
 
         header: PageHeader {
-            title: "Categories"
+            title: qsTr("Categories")
         }
 
         delegate: BackgroundItem {
