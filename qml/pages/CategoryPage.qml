@@ -100,7 +100,7 @@ Page {
 
             Label {
                 anchors {horizontalCenter: parent.horizontalCenter}
-                text: qsTr("in %2 this month", "subtitle of the amount spent in the CategoryView").arg(categoryName)
+                text: qsTr("in %1 this month", "subtitle of the amount spent in the CategoryView").arg(categoryName)
                 color: Theme.secondaryHighlightColor
                 font.pixelSize: Theme.fontSizeLarge
             }

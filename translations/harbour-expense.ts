@@ -12,7 +12,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>in %2 this month</source>
+        <source>in %1 this month</source>
         <comment>subtitle of the amount spent in the CategoryView</comment>
         <translation type="unfinished"></translation>
     </message>
