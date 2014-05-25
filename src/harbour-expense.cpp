@@ -33,6 +33,9 @@
 #endif
 
 #include <sailfishapp.h>
+#include <QGuiApplication>
+#include <QDebug>
+#include <QQuickView>
 
 #include <QTranslator>
 #include <QLocale>
