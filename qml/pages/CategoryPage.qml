@@ -64,7 +64,7 @@ Page {
             }
 
             MenuItem {
-                text: qsTr("Add Category")
+                text: qsTr("Add Entry")
                 onClicked: {
                     var dialog = pageStack.push(Qt.resolvedUrl("../components/NewEntryDialog.qml"),{"category":categoryName})
                     dialog.accepted.connect(function() {

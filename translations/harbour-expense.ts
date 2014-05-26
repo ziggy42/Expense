@@ -8,10 +8,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Add Category</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>in %1 this month</source>
         <comment>subtitle of the amount spent in the CategoryView</comment>
         <translation type="unfinished"></translation>
@@ -37,6 +33,10 @@
     <message>
         <source>%1 %2</source>
         <comment>1 is amount and 2 is currency</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add Entry</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
