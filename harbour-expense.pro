@@ -17,26 +17,13 @@ CONFIG += sailfishapp
 SOURCES += src/harbour-expense.cpp
 
 OTHER_FILES += qml/harbour-expense.qml \
-    qml/cover/CoverPage.qml \
-    qml/pages/FirstPage.qml \
-    qml/pages/SecondPage.qml \
-    rpm/harbour-expense.changes.in \
-    rpm/harbour-expense.spec \
-    rpm/harbour-expense.yaml \
+    qml/cover/*.qml \
+    qml/JS/*.js \
+    qml/components/*.qml \
+    qml/pages/*.qml \
+    rpm/* \
     translations/harbour-expense*.ts \
-    harbour-expense.desktop \
-    qml/JS/dbmanager.js \
-    qml/JS/preferences.js \
-    qml/components/DeleteCategoryDialog.qml \
-    qml/components/DeleteEntryDialog.qml \
-    qml/components/NewCategoryDialog.qml \
-    qml/components/NewEntryDialog.qml \
-    qml/pages/CategoryPage.qml \
-    qml/pages/ContactsPage.qml \
-    qml/pages/MonthsPage.qml \
-    qml/pages/MonthSummaryPage.qml \
-    qml/pages/SettingsPage.qml \
-    translations/harbour-expense.it.ts
+    harbour-expense.desktop
 
 # to disable building translations every time, comment out the
 # following CONFIG line
