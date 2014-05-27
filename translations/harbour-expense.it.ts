@@ -132,14 +132,14 @@
     </message>
     <message>
         <source>Today</source>
-        <translation>Heute</translation>
+        <translation>Oggi</translation>
     </message>
 </context>
 <context>
     <name>MonthsPage</name>
     <message>
         <source>History</source>
-        <translation>Verlauf</translation>
+        <translation>Storia</translation>
     </message>
     <message>
         <source>%1 %2</source>
@@ -151,33 +151,33 @@
     <name>NewCategoryDialog</name>
     <message>
         <source>Choose a Name</source>
-        <translation>Wähle einen Namen</translation>
+        <translation>Scegli un Nome</translation>
     </message>
     <message>
         <source>Name</source>
         <comment>placeholder for category name</comment>
-        <translation>Name</translation>
+        <translation>Nome</translation>
     </message>
 </context>
 <context>
     <name>NewEntryDialog</name>
     <message>
         <source>New Entry</source>
-        <translation>Neuer Eintrag</translation>
+        <translation>Nuova Spesa</translation>
     </message>
     <message>
         <source>Amount</source>
         <comment>placeholder for amount</comment>
-        <translation>Betrag</translation>
+        <translation>Quantità</translation>
     </message>
     <message>
         <source>Desc</source>
         <comment>placeholder for description</comment>
-        <translation>Beschreibung</translation>
+        <translation>Descrizione</translation>
     </message>
     <message>
         <source>Choose Category</source>
-        <translation>Wähle die Kategorie</translation>
+        <translation>Scegli una Categoria</translation>
     </message>
 </context>
 <context>
