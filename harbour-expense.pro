@@ -35,10 +35,11 @@ OTHER_FILES += qml/harbour-expense.qml \
     qml/pages/ContactsPage.qml \
     qml/pages/MonthsPage.qml \
     qml/pages/MonthSummaryPage.qml \
-    qml/pages/SettingsPage.qml
+    qml/pages/SettingsPage.qml \
+    translations/harbour-expense.it.ts
 
 # to disable building translations every time, comment out the
 # following CONFIG line
 CONFIG += sailfishapp_i18n
-TRANSLATIONS += translations/harbour-expense.de.ts
-
+TRANSLATIONS += translations/harbour-expense.de.ts \
+    translations/harbour-expense.it.ts
