@@ -8,10 +8,6 @@
         <translation>Kategorie löschen</translation>
     </message>
     <message>
-        <source>Add Category</source>
-        <translation>Kategorie hinzufügen</translation>
-    </message>
-    <message>
         <source>in %1 this month</source>
         <comment>subtitle of the amount spent in the CategoryView</comment>
         <translation>diesen Monat in %1</translation>
@@ -38,6 +34,10 @@
         <source>%1 %2</source>
         <comment>1 is amount and 2 is currency</comment>
         <translation>%1 %2</translation>
+    </message>
+    <message>
+        <source>Add Entry</source>
+        <translation>Hinzufügen</translation>
     </message>
 </context>
 <context>
