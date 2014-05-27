@@ -37,6 +37,8 @@ ApplicationWindow
     id: appWindow
     initialPage: Component { FirstPage { } }
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
+
+    property bool quickAddOpen: false
 }
 
 

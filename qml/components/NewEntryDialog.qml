@@ -13,7 +13,7 @@ Dialog {
     property alias categories: silicaListView.model
 
     Component.onCompleted: {
-        Preferences.set("DIALOG_OPENED",1);
+        appWindow.quickAddOpen = true
 
         categories = DBmanager.getAllCategories()
         if(category !== "") categoryLabel.text = category
@@ -113,6 +113,6 @@ Dialog {
             var currentDate = Qt.formatDateTime(new Date(), "ddMMyyyy");
             DBmanager.insertCharge(categoryLabel.text,amountField.text,descField.text,currentDate)
         }
-        Preferences.set("DIALOG_OPENED",0);
+        appWindow.quickAddOpen = false
     }
 }
