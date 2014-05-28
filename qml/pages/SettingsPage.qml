@@ -51,7 +51,7 @@ Page {
 
             Button {
                 id: resetButton
-                width: parent.width * 0.75
+                width: parent.width * 0.7
                 anchors {
                     horizontalCenter: parent.horizontalCenter
                 }
@@ -61,7 +61,7 @@ Page {
 
             Button {
                 id: contactLabel
-                width: parent.width * 0.75
+                width: parent.width * 0.7
                 anchors {
                     horizontalCenter: parent.horizontalCenter
                 }

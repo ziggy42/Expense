@@ -35,16 +35,19 @@ Page {
             }
 
             Label {
-                text: "1.6"
+                text: qsTr("Version %1").arg(1.6)
                 font.pixelSize: Theme.fontSizeTiny
                 color: Theme.secondaryHighlightColor
                 anchors.horizontalCenter: parent.horizontalCenter
             }
 
             Label {
-                text: qsTr("A simple app to manage your money")
+                text: qsTr("A simple app to manage your money. This software is open source:")
                 color: Theme.secondaryHighlightColor
                 anchors.horizontalCenter: parent.horizontalCenter
+                wrapMode: Text.WordWrap
+                horizontalAlignment: TextInput.AlignHCenter
+                width: parent.width*0.8
             }
 
             Label {

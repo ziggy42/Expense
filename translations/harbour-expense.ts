@@ -51,7 +51,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>A simple app to manage your money</source>
+        <source>Version %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A simple app to manage your money. This software is open source:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
