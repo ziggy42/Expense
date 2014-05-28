@@ -12,7 +12,6 @@ Page {
     ListModel {id: monthsModel}
 
     function makeMeACoolMonth(date) {
-        // note: constructor takes months values (0-11)!!
         var d = new Date(parseInt(date.substring(2,6)),
                          parseInt(date.substring(0,2)-1))
 

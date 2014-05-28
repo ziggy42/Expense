@@ -33,7 +33,6 @@ Page {
         percentage = DBmanager.getPercentageForCategory(categoryName)
         totalThisMonth = DBmanager.getTotalSpentThisMonthInCategory(categoryName)
         animationTimer.running = true
-
         expenses = DBmanager.getSpentThisMonthInCategory(categoryName)
         for(var i = 0; i < expenses.length; i++)
             model.append({"amount" : expenses[i].amount, "desc" : expenses[i].desc, "date" : expenses[i].date})

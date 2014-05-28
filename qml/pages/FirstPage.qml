@@ -104,7 +104,6 @@ Page {
 
         Label {
             id: totalLabel
-            text: ""
             anchors {
                 horizontalCenter: parent.horizontalCenter
                 top: lastMonthLabel.bottom
@@ -116,7 +115,6 @@ Page {
 
         Label {
             id: mostUsedCategoryLabel
-            text: ""
             anchors {
                 horizontalCenter: parent.horizontalCenter
                 top: totalLabel.bottom

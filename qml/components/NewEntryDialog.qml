@@ -14,7 +14,6 @@ Dialog {
 
     Component.onCompleted: {
         appWindow.quickAddOpen = true
-
         categories = DBmanager.getAllCategories()
         if(category !== "") categoryLabel.text = category
         amountField.focus = true

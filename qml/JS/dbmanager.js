@@ -1,9 +1,3 @@
-/*
-  Si deve aggiungere per forza un ID che faccia da primary key a expense.
-  Attualmente se ho due entrate nello stesso giorno nella stessa categoria per gli stessi soldi e con la stessa descrizione
-  e ne cancello uno il sistema li cancella entrambi (o gli n)
-  */
-
 function getDatabase() {
      return LocalStorage.openDatabaseSync("Categories", "1.0", "StorageDatabase", 1000000);
 }
@@ -168,9 +162,6 @@ function getTotalByMonthAndYear(date) {
         return 0;
     }
 
-    //console.log("Input: " + date)
-    //console.log("Output: " + result)
-
     return result;
 }
 
@@ -239,8 +230,6 @@ function getSpentThisMonthInCategory(category) {
     return result;
 }
 
-
-// uglyperiod è tipo 102014 (ottobre 2014)
 function getSpentThisMonth(uglyperiod) {
     var db = getDatabase();
     var result = new Array()
@@ -312,10 +301,7 @@ function getPercentageForCategory(category) {
 
 function getPercentageForCategoryTotal() {
     var db = getDatabase();
-    var total
-    var current
-    var rs
-    var dbItem
+    var total, current, rs, dbItem
 
     try {
         db.transaction( function(tx) {

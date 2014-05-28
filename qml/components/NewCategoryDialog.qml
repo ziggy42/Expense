@@ -23,7 +23,6 @@ Dialog {
             top: selectLabel.bottom
             topMargin: Theme.paddingLarge
         }
-
         placeholderText: qsTr("Name", "placeholder for category name")
     }
 
