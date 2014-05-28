@@ -41,6 +41,21 @@
     </message>
 </context>
 <context>
+    <name>ContactsPage</name>
+    <message>
+        <source>About</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Expense</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A simple app to manage your money</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>CoverPage</name>
     <message>
         <source>This month:</source>
@@ -214,15 +229,15 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Contact the Developer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Reset Database</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>About</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

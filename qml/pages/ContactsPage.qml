@@ -14,34 +14,43 @@ Page {
         Column {
             id: column
             width: contactsPage.width
-            spacing: Theme.paddingSmall
+            spacing: Theme.paddingLarge
 
             PageHeader {
-                title: "Contacts"
+                title: qsTr("About")
             }
 
-            Row {
-                anchors {horizontalCenter: parent.horizontalCenter}
-                Label { font.bold: true; text: "Author: " }
-                Label { text: "Andrea Pivetta"}
+            Label {
+                text: qsTr("Expense")
+                color: Theme.highlightColor
+                font.pixelSize: Theme.fontSizeExtraLarge*1.5
+                anchors.horizontalCenter: parent.horizontalCenter
             }
 
-            Row{
-                anchors {horizontalCenter: parent.horizontalCenter}
-                Label { font.bold: true; text: "Home Page: "}
-                Label { text: "<a href=\"http://andreapivetta.altervista.org/\">blog</a>"; onLinkActivated: Qt.openUrlExternally(link)}
+            Image {
+                anchors.horizontalCenter: parent.horizontalCenter
+                source: "/usr/share/icons/hicolor/86x86/apps/harbour-expense.png"
+                width: parent.width *0.2
+                height: width
             }
 
-            Row {
-                anchors {horizontalCenter: parent.horizontalCenter}
-                Label { font.bold: true; text: "Mail: "}
-                Label { text: "vanpivix@gmail.com"}
+            Label {
+                text: "1.6"
+                font.pixelSize: Theme.fontSizeTiny
+                color: Theme.secondaryHighlightColor
+                anchors.horizontalCenter: parent.horizontalCenter
             }
 
-            Row {
-                anchors {horizontalCenter: parent.horizontalCenter}
-                Label { font.bold: true; text: "Twitter: "}
-                Label { text: "<a href=\"https://twitter.com/Pivix00\">@Pivix00</a>"; onLinkActivated: Qt.openUrlExternally(link)}
+            Label {
+                text: qsTr("A simple app to manage your money")
+                color: Theme.secondaryHighlightColor
+                anchors.horizontalCenter: parent.horizontalCenter
+            }
+
+            Label {
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: "<a href=\"https://github.com/ziggy42/Expense/\">Github</a>";
+                onLinkActivated: Qt.openUrlExternally(link)
             }
         }
     }

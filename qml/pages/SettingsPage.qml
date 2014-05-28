@@ -65,7 +65,7 @@ Page {
                 anchors {
                     horizontalCenter: parent.horizontalCenter
                 }
-                text: qsTr("Contact the Developer")
+                text: qsTr("About")
 
                 onClicked: pageStack.push(Qt.resolvedUrl("ContactsPage.qml"))
             }
