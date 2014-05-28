@@ -23,7 +23,8 @@ OTHER_FILES += qml/harbour-expense.qml \
     qml/pages/*.qml \
     rpm/* \
     translations/harbour-expense*.ts \
-    harbour-expense.desktop
+    harbour-expense.desktop \
+    qml/components/ResetDatabaseDialog.qml
 
 # to disable building translations every time, comment out the
 # following CONFIG line

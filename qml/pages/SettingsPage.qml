@@ -2,6 +2,7 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import QtQuick.LocalStorage 2.0
 import "../JS/preferences.js" as Preferences
+import "../JS/dbmanager.js" as DBmanager
 
 Page {
     id: settingsPage
@@ -11,7 +12,7 @@ Page {
     SilicaFlickable {
         anchors.fill: parent
 
-        PullDownMenu {
+        /* PullDownMenu {
             MenuItem {
                 text: qsTr("Restore Default")
                 onClicked: {
@@ -19,14 +20,14 @@ Page {
                     currencyComboBox.currentIndex = 0
                 }
             }
-        }
+        } */
 
         contentHeight: column.height
 
         Column {
             id: column
             width: settingsPage.width
-            spacing: Theme.paddingSmall
+            spacing: Theme.paddingLarge
 
             PageHeader {
                 title: qsTr("Settings")
@@ -46,6 +47,16 @@ Page {
                 }
 
                 onCurrentIndexChanged: Preferences.set("Currency",currentIndex)
+            }
+
+            Button {
+                id: resetButton
+                width: parent.width * 0.75
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                }
+                text: qsTr("Reset Database")
+                onClicked: pageStack.push(Qt.resolvedUrl("../components/ResetDatabaseDialog.qml"))
             }
 
             Button {

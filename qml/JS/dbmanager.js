@@ -355,14 +355,6 @@ function deleteCategory(category) {
     return res;
 }
 
-function resetExpense() {
-    var db = getDatabase();
-    db.transaction(
-        function(tx) {
-            tx.executeSql('DROP TABLE expense');
-      });
-}
-
 function reset() {
     var db = getDatabase();
     db.transaction(

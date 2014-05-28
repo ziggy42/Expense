@@ -181,6 +181,22 @@
     </message>
 </context>
 <context>
+    <name>ResetDatabaseDialog</name>
+    <message>
+        <source>Reset Database</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>!</source>
+        <comment>The exclamation mark in the DeleteCategory View</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All your data will be irreversibly lost!!</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>SecondPage</name>
     <message>
         <source>Add Category</source>
@@ -194,10 +210,6 @@
 <context>
     <name>SettingsPage</name>
     <message>
-        <source>Restore Default</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Currency: </source>
         <translation type="unfinished"></translation>
     </message>
@@ -207,6 +219,10 @@
     </message>
     <message>
         <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reset Database</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

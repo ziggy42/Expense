@@ -209,5 +209,9 @@
         <source>Settings</source>
         <translation>Impostazioni</translation>
     </message>
+    <message>
+        <source>Reset Database</source>
+        <translation>Reset del Database</translation>
+    </message>
 </context>
 </TS>
