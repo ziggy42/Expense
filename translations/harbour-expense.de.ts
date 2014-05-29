@@ -41,6 +41,25 @@
     </message>
 </context>
 <context>
+    <name>ContactsPage</name>
+    <message>
+        <source>About</source>
+        <translation>Über</translation>
+    </message>
+    <message>
+        <source>Expense</source>
+        <translation>Expense</translation>
+    </message>
+    <message>
+        <source>Version %1</source>
+        <translation>Version %1</translation>
+    </message>
+    <message>
+        <source>A simple app to manage your money. This software is open source:</source>
+        <translation>Eine einfache App zum Geld verwalten. Diese Software ist Open Source.</translation>
+    </message>
+</context>
+<context>
     <name>CoverPage</name>
     <message>
         <source>This month:</source>
@@ -181,6 +200,22 @@
     </message>
 </context>
 <context>
+    <name>ResetDatabaseDialog</name>
+    <message>
+        <source>Reset Database</source>
+        <translation>Datenbank zurücksetzen</translation>
+    </message>
+    <message>
+        <source>!</source>
+        <comment>The exclamation mark in the DeleteCategory View</comment>
+        <translation>!</translation>
+    </message>
+    <message>
+        <source>All your data will be irreversibly lost!!</source>
+        <translation>Alle Daten werden unwiederruflich verloren gehen!!</translation>
+    </message>
+</context>
+<context>
     <name>SecondPage</name>
     <message>
         <source>Add Category</source>
@@ -194,20 +229,20 @@
 <context>
     <name>SettingsPage</name>
     <message>
-        <source>Restore Default</source>
-        <translation>Standard wiederherstellen</translation>
-    </message>
-    <message>
         <source>Currency: </source>
         <translation>Währung: </translation>
     </message>
     <message>
-        <source>Contact the Developer</source>
-        <translation>Den Entwickler kontaktieren</translation>
-    </message>
-    <message>
         <source>Settings</source>
         <translation>Einstellungen</translation>
+    </message>
+    <message>
+        <source>Reset Database</source>
+        <translation>Datenbank zurücksetzen</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Über</translation>
     </message>
 </context>
 </TS>
