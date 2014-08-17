@@ -40,6 +40,6 @@ function get(setting, default_value) {
 }
 
 function getCurrency() {
-    var options = ['€','£','$']
+    var options = ['€','£','$','Rs']
     return options[get("Currency",0)]
 }

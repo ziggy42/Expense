@@ -7,7 +7,7 @@ import "../JS/dbmanager.js" as DBmanager
 Page {
     id: settingsPage
 
-    property var options: ['€','£','$']
+    property var options: ['€','£','$','Rs']
 
     SilicaFlickable {
         anchors.fill: parent
@@ -44,6 +44,7 @@ Page {
                     MenuItem { text: options[0] }
                     MenuItem { text: options[1] }
                     MenuItem { text: options[2] }
+                    MenuItem { text: options[3] }
                 }
 
                 onCurrentIndexChanged: Preferences.set("Currency",currentIndex)
