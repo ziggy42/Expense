@@ -39,7 +39,61 @@ function get(setting, default_value) {
     return res
 }
 
+function initializeCurrencies() {
+    var db = getDatabase();
+
+    db.transaction(
+        function(tx) {
+            tx.executeSql('CREATE TABLE IF NOT EXISTS currencies(currency TEXT NOT NULL PRIMARY KEY)');
+
+            tx.executeSql("INSERT INTO currencies VALUES('€')");
+            tx.executeSql("INSERT INTO currencies VALUES('£')");
+            tx.executeSql("INSERT INTO currencies VALUES('$')");
+            tx.executeSql("INSERT INTO currencies VALUES('Rs')");
+        }
+    );
+}
+
+function getAllCurrencies() {
+    var db = getDatabase();
+    var options = []
+
+    db.transaction(
+        function(tx) {
+            var rs = tx.executeSql('SELECT currency FROM currencies');
+            for(var i = 0; i < rs.rows.length; i++) {
+                var dbItem = rs.rows.item(i);
+                options.push(dbItem.currency);
+            }
+        }
+    );
+
+    return options;
+}
+
 function getCurrency() {
-    var options = ['€','£','$','Rs']
+    if(!get("CURRENCY_INIT", false)) {
+        initializeCurrencies();
+        set("CURRENCY_INIT", true);
+    }
+
+    var options = getAllCurrencies();
     return options[get("Currency",0)]
+}
+
+function addCurrency(currency) {
+    var db = getDatabase();
+    var res = ""
+
+    db.transaction(
+        function(tx) {
+            var rs = tx.executeSql('INSERT INTO currencies VALUES (?);', [currency]);
+            if (rs.rowsAffected > 0) {
+                res = "Insert on currencies complited";
+            } else {
+                res = "Error";
+            }
+        }
+    );
+    return res;
 }

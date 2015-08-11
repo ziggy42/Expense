@@ -7,7 +7,7 @@ import "../JS/dbmanager.js" as DBmanager
 Page {
     id: settingsPage
 
-    property var options: ['€','£','$','Rs']
+    property var options: Preferences.getAllCurrencies()
 
     SilicaFlickable {
         anchors.fill: parent
@@ -41,31 +41,42 @@ Page {
                 currentIndex: Preferences.get("Currency",0)
 
                 menu: ContextMenu {
-                    MenuItem { text: options[0] }
-                    MenuItem { text: options[1] }
-                    MenuItem { text: options[2] }
-                    MenuItem { text: options[3] }
+                    Repeater {
+                        model: options
+                        MenuItem { text: options[index]}
+                    }
                 }
 
                 onCurrentIndexChanged: Preferences.set("Currency",currentIndex)
             }
 
             Button {
+                id: addCustomCurrency
+                width: parent.width * 0.7
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: qsTr("Add New Currency")
+
+                onClicked: {
+                    var dialog = pageStack.push(Qt.resolvedUrl("../components/AddCurrencyDialog.qml"))
+                    dialog.accepted.connect(function() {
+                        options = Preferences.getAllCurrencies()
+                    })
+                }
+            }
+
+            Button {
                 id: resetButton
                 width: parent.width * 0.7
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                }
+                anchors.horizontalCenter: parent.horizontalCenter
                 text: qsTr("Reset Database")
+
                 onClicked: pageStack.push(Qt.resolvedUrl("../components/ResetDatabaseDialog.qml"))
             }
 
             Button {
                 id: contactLabel
                 width: parent.width * 0.7
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                }
+                anchors.horizontalCenter: parent.horizontalCenter
                 text: qsTr("About")
 
                 onClicked: pageStack.push(Qt.resolvedUrl("ContactsPage.qml"))

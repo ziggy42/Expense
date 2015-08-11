@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de_DE">
+<TS version="2.1" language="de_DE">
+<context>
+    <name>AddCurrencyDialog</name>
+    <message>
+        <source>New Currency</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Currency</source>
+        <comment>placeholder for currency</comment>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
 <context>
     <name>CategoryPage</name>
     <message>
@@ -243,6 +255,10 @@
     <message>
         <source>About</source>
         <translation>Über</translation>
+    </message>
+    <message>
+        <source>Add New Currency</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

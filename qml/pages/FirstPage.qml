@@ -13,7 +13,7 @@ Page {
     property alias mostUsedCategory: mostUsedCategoryLabel.text
 
     Component.onCompleted: {
-        if(DBmanager.getNumberOftables() !== 2)
+        if(DBmanager.getNumberOftables() === 0)
             DBmanager.initializeDatabase()
     }
 
