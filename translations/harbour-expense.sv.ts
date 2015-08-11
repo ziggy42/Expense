@@ -5,12 +5,12 @@
     <name>AddCurrencyDialog</name>
     <message>
         <source>New Currency</source>
-        <translation type="unfinished"></translation>
+        <translation>Ny valuta</translation>
     </message>
     <message>
         <source>Currency</source>
         <comment>placeholder for currency</comment>
-        <translation type="unfinished"></translation>
+        <translation>Valuta</translation>
     </message>
 </context>
 <context>
@@ -258,7 +258,7 @@
     </message>
     <message>
         <source>Add New Currency</source>
-        <translation type="unfinished"></translation>
+        <translation>Lägg till ny valuta</translation>
     </message>
 </context>
 </TS>
