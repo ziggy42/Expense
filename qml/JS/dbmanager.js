@@ -1,5 +1,3 @@
-//.import "preferences.js" as Preferences
-
 function getDatabase() {
      return LocalStorage.openDatabaseSync("Categories", "1.0", "StorageDatabase", 1000000);
 }

@@ -5,12 +5,12 @@
     <name>AddCurrencyDialog</name>
     <message>
         <source>New Currency</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuova Valuta</translation>
     </message>
     <message>
         <source>Currency</source>
         <comment>placeholder for currency</comment>
-        <translation type="unfinished"></translation>
+        <translation>Valuta</translation>
     </message>
 </context>
 <context>
@@ -56,7 +56,7 @@
     <name>ContactsPage</name>
     <message>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>About</translation>
     </message>
     <message>
         <source>Expense</source>
@@ -64,11 +64,11 @@
     </message>
     <message>
         <source>Version %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Versione %1</translation>
     </message>
     <message>
         <source>A simple app to manage your money. This software is open source:</source>
-        <translation type="unfinished"></translation>
+        <translation>Una semplice app per gestire le tue spese. Questo software è open source:</translation>
     </message>
 </context>
 <context>
@@ -224,7 +224,7 @@
     </message>
     <message>
         <source>All your data will be irreversibly lost!!</source>
-        <translation type="unfinished"></translation>
+        <translation>Tutti i tuoi dati andranno persi!</translation>
     </message>
 </context>
 <context>
@@ -254,11 +254,11 @@
     </message>
     <message>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>About</translation>
     </message>
     <message>
         <source>Add New Currency</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiungi Valuta</translation>
     </message>
 </context>
 </TS>

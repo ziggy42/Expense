@@ -24,10 +24,10 @@ OTHER_FILES += qml/harbour-expense.qml \
     rpm/* \
     translations/harbour-expense*.ts \
     harbour-expense.desktop \
-    qml/components/AddCurrencyDialog.qml
 
 # to disable building translations every time, comment out the
 # following CONFIG line
 CONFIG += sailfishapp_i18n
 TRANSLATIONS += translations/harbour-expense.de.ts \
-    translations/harbour-expense.it.ts
+    translations/harbour-expense.it.ts \
+    translations/harbour-expense.sv.ts
