@@ -1,3 +1,7 @@
+![Project unmaintained][unmaintained-image]
+
+[unmaintained-image]: https://img.shields.io/badge/project-unmaintained-red.svg
+
 Expense
 =======
 
